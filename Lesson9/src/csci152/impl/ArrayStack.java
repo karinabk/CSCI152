@@ -41,7 +41,7 @@ public class ArrayStack<T> implements Stack<T> {
             throw new Exception("stack is empty");
         }
         T result = values[size - 1];
-        
+        values[size-1]=null;
         size--;
         return result;
     }

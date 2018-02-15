@@ -19,9 +19,9 @@ public class TestLesson8 {
      * @return 
      */
     public static IntStack copyStack(IntStack stk){
-        ArrayIntStack origStk = new ArrayIntStack();
-        ArrayIntStack tempStk = new ArrayIntStack();
-        ArrayIntStack save = new ArrayIntStack();
+        IntStack origStk = new ArrayIntStack();
+        IntStack tempStk = new ArrayIntStack();
+        IntStack save = new ArrayIntStack();
         int pop = 0;
         try{
             while(stk.getSize()!=0){
@@ -48,7 +48,7 @@ public class TestLesson8 {
      * @return 
      */
     public static int evenCount(IntStack stk){
-        ArrayIntStack origStk = new ArrayIntStack();
+        IntStack origStk = new ArrayIntStack();
         int counter =0;
         
         
@@ -72,7 +72,7 @@ public class TestLesson8 {
      * @param toRev 
      */
     public static void reverseQueue(IntQueue toRev){
-        ArrayIntStack stk = new ArrayIntStack();
+        IntStack stk = new ArrayIntStack();
        try{ 
         while(toRev.getSize()!=0)
             stk.push(toRev.dequeue());
@@ -91,7 +91,7 @@ public class TestLesson8 {
      * @param toRev 
      */
     public static void reverseStack(IntStack toRev){
-        ArrayIntQueue temp = new ArrayIntQueue();
+        IntQueue temp = new ArrayIntQueue();
         
         try{
             while (toRev.getSize()!=0)
@@ -111,7 +111,7 @@ public class TestLesson8 {
      * @param val 
      */
     public static void insert(IntStack st, int pos, int val){
-          ArrayIntStack temp = new ArrayIntStack();
+          IntStack temp = new ArrayIntStack();
           try{ 
             while (st.getSize()!=pos)
                 temp.push(st.pop());

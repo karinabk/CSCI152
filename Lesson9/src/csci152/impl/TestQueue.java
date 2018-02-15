@@ -7,12 +7,8 @@ package csci152.impl;
 
 import csci152.adt.Queue;
 import csci152.adt.Stack;
-import static csci152.impl.ModificationsLesson8.copyStack;
-import static csci152.impl.ModificationsLesson8.evenCount;
-import static csci152.impl.ModificationsLesson8.insert;
-import static csci152.impl.ModificationsLesson8.reverseQueue;
+import static csci152.impl.NovoeImya.isIncreasing;
 
-import csci152test.Student;
 
 
 /**
@@ -21,32 +17,37 @@ import csci152test.Student;
  */
 public class TestQueue {
     public static void main(String[] args){
+       Stack newList = new LinkedListStack();
        
-        
-        Stack<Integer> st = new ArrayStack();
-        st.push(4);
-        st.push(1);
-        st.push(2);
-        st.push(3);
-        Queue<Integer> qu= new ArrayQueue();
-        
-        qu.enqueue(1);
-        qu.enqueue(3);
-        qu.enqueue(2);
-        qu.enqueue(8);
-        System.out.println("Queue "+qu);
-        reverseQueue(qu);
-        System.out.println("Reverse Queue "+qu);
+       try{
+            newList.pop();
+              }catch (Exception ex){
+            System.out.println(ex.getMessage());
+       }
+       try{ 
+       for (int i = 0; i< 12;i++){
+                newList.push(i);
+                }
+            System.out.println("Push 12 elemetns"+newList+"\n siize "+newList.getSize());
+            newList.pop();
+            newList.pop();
+            System.out.println("Pop 2 elemetns"+newList+"\n siize "+newList.getSize());
+            newList.clear();
+            System.out.println("After clear" + newList+"\nSize "+newList.getSize());
+            for (double i = 0; i< 22;i++){
+                newList.push(i);
+                }
+            System.out.println("Push 22 items" + newList+"\nSize "+newList.getSize());
+       }catch (Exception ex){
+            System.out.println(ex.getMessage());
+       }
        
-        System.out.println(st);
-        
-        
-        System.out.println(copyStack(st));
-        System.out.println(st);
-        
-        insert(st, 3,2);
-        System.out.println("number of even numbers "+evenCount(st));
-        
+        newList.push(2.0);
+        System.out.println(newList);
+        System.out.println(isIncreasing(newList));   
+        System.out.println(newList);
+       
+       
         
     }
 }

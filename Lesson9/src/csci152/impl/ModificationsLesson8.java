@@ -19,13 +19,13 @@ public class ModificationsLesson8 {
      * @return 
      */
     public static Stack copyStack(Stack stk){
-        ArrayStack<Integer> origStk = new ArrayStack();
-        ArrayStack<Integer> tempStk = new ArrayStack();
-        ArrayStack<Integer> save = new ArrayStack();
-        int pop=0;
+        Stack<Integer> origStk = new ArrayStack();
+        Stack<Integer> tempStk = new ArrayStack();
+        Stack<Integer> save = new ArrayStack();
+        Integer pop=0;
         try{
             while(stk.getSize()!=0){
-                pop = (Integer)stk.pop();
+                pop = (Integer) stk.pop();
                 tempStk.push(pop);
                 save.push(pop);
             }
@@ -73,7 +73,7 @@ public class ModificationsLesson8 {
      * @param toRev 
      */
     public static void reverseQueue(Queue toRev){
-        ArrayStack<Integer> stk = new ArrayStack();
+        Stack<Integer> stk = new ArrayStack();
        try{ 
         while(toRev.getSize()!=0)
             stk.push((Integer) toRev.dequeue());
